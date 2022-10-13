@@ -1,6 +1,7 @@
 package co.devco.pruebas.Tareas;
 
 import co.devco.pruebas.SwagLabsLoginModel;
+import lombok.AllArgsConstructor;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
@@ -8,13 +9,11 @@ import net.serenitybdd.screenplay.actions.Enter;
 
 import static co.devco.pruebas.Interfaces.SwaglabsPage.*;
 
-
+@AllArgsConstructor
 public class LoginTask implements Task {
     private final SwagLabsLoginModel loginModel;
 
-    public LoginTask(SwagLabsLoginModel loginModel) {
-        this.loginModel = loginModel;
-    }
+
 
     @Override
     public <T extends Actor> void performAs(T t) {
